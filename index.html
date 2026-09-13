@@ -1,0 +1,2253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JavaScript Fundamentals — Learn & Practice</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside class="sidebar">
+  <div class="sb-head">
+    <div class="logo"><span class="logo-badge">JS</span><span class="logo-text">Fundamentals</span></div>
+    <div class="pw"><div class="pb" id="pb" style="width:0%"></div></div>
+    <div class="pt" id="pt">0 of 0 completed</div>
+  </div>
+
+  <div class="cat">JS Fundamentals</div>
+  <div class="ni active" data-id="l2" onclick="go('l2')"><span>📦</span>Data Types &amp; Variables<span class="nt" id="nt-l2">L2</span></div>
+  <div class="ni" data-id="l3" onclick="go('l3')"><span>🔀</span>Conditionals<span class="nt" id="nt-l3">L3</span></div>
+  <div class="ni" data-id="l4" onclick="go('l4')"><span>🔁</span>Loops<span class="nt" id="nt-l4">L4</span></div>
+  <div class="ni" data-id="l5" onclick="go('l5')"><span>⚡</span>Functions<span class="nt" id="nt-l5">L5</span></div>
+  <div class="ni" data-id="l6" onclick="go('l6')"><span>📋</span>Arrays<span class="nt" id="nt-l6">L6</span></div>
+  <div class="ni" data-id="l7" onclick="go('l7')"><span>🗃️</span>Objects<span class="nt" id="nt-l7">L7</span></div>
+
+  <div class="cat">JS Advanced</div>
+  <div class="ni" data-id="scope" onclick="go('scope')"><span>🔭</span>Scope &amp; Closures<span class="nt" id="nt-scope"></span></div>
+  <div class="ni" data-id="errors" onclick="go('errors')"><span>🚨</span>Error Handling<span class="nt" id="nt-errors"></span></div>
+  <div class="ni" data-id="dom" onclick="go('dom')"><span>🌐</span>DOM Events<span class="nt" id="nt-dom"></span></div>
+  <div class="ni" data-id="modules" onclick="go('modules')"><span>📦</span>Modules<span class="nt" id="nt-modules"></span></div>
+  <div class="ni" data-id="promises" onclick="go('promises')"><span>🔗</span>Promises<span class="nt" id="nt-promises"></span></div>
+  <div class="ni" data-id="async" onclick="go('async')"><span>⏳</span>Async / Await<span class="nt" id="nt-async"></span></div>
+  <div class="ni" data-id="oop" onclick="go('oop')"><span>🏗️</span>OOP &amp; Classes<span class="nt" id="nt-oop"></span></div>
+  <div class="ni" data-id="json" onclick="go('json')"><span>📄</span>JSON<span class="nt" id="nt-json"></span></div>
+
+  <div class="cat">React</div>
+  <div class="ni" data-id="r-comp" onclick="go('r-comp')"><span>⚛️</span>Components &amp; JSX<span class="nt" id="nt-r-comp"></span></div>
+  <div class="ni" data-id="r-state" onclick="go('r-state')"><span>🪝</span>State &amp; Hooks<span class="nt" id="nt-r-state"></span></div>
+  <div class="ni" data-id="r-effect" onclick="go('r-effect')"><span>♻️</span>useEffect<span class="nt" id="nt-r-effect"></span></div>
+  <div class="ni" data-id="r-router" onclick="go('r-router')"><span>🗺️</span>Routing<span class="nt" id="nt-r-router"></span></div>
+  <div class="ni" data-id="r-forms" onclick="go('r-forms')"><span>📝</span>Forms<span class="nt" id="nt-r-forms"></span></div>
+  <div class="ni" data-id="r-api" onclick="go('r-api')"><span>🔌</span>API Integration<span class="nt" id="nt-r-api"></span></div>
+
+  <div class="cat">TypeScript</div>
+  <div class="ni" data-id="ts-types" onclick="go('ts-types')"><span>🔷</span>Basic Types<span class="nt" id="nt-ts-types"></span></div>
+  <div class="ni" data-id="ts-iface" onclick="go('ts-iface')"><span>🧩</span>Interfaces &amp; Types<span class="nt" id="nt-ts-iface"></span></div>
+  <div class="ni" data-id="ts-react" onclick="go('ts-react')"><span>⚛️</span>TypeScript + React<span class="nt" id="nt-ts-react"></span></div>
+
+  <div class="cat">HTML &amp; CSS</div>
+  <div class="ni" data-id="html-basics" onclick="go('html-basics')"><span>🌐</span>HTML Basics<span class="nt" id="nt-html-basics"></span></div>
+  <div class="ni" data-id="css-basics" onclick="go('css-basics')"><span>🎨</span>CSS Basics<span class="nt" id="nt-css-basics"></span></div>
+
+  <div class="cat">Tools &amp; Practices</div>
+  <div class="ni" data-id="cmdline" onclick="go('cmdline')"><span>💻</span>Command Line<span class="nt" id="nt-cmdline"></span></div>
+  <div class="ni" data-id="nodejs" onclick="go('nodejs')"><span>🟢</span>Node.js Basics<span class="nt" id="nt-nodejs"></span></div>
+  <div class="ni" data-id="git" onclick="go('git')"><span>🌿</span>Git Workflows<span class="nt" id="nt-git"></span></div>
+  <div class="ni" data-id="testing" onclick="go('testing')"><span>🧪</span>Testing<span class="nt" id="nt-testing"></span></div>
+  <div class="ni" data-id="a11y" onclick="go('a11y')"><span>♿</span>Accessibility<span class="nt" id="nt-a11y"></span></div>
+  <div class="ni" data-id="debug" onclick="go('debug')"><span>🐛</span>Debugging<span class="nt" id="nt-debug"></span></div>
+  <div class="ni" data-id="ai" onclick="go('ai')"><span>🤖</span>AI Best Practices<span class="nt" id="nt-ai"></span></div>
+
+  <div class="cat">Reference</div>
+  <div class="ni" data-id="cheat" onclick="go('cheat')"><span>📝</span>Cheat Sheet</div>
+</aside>
+
+<main class="main">
+  <div class="topbar">
+    <div class="topbar-title" id="pageTitle">L2 — Data Types &amp; Variables</div>
+    <div class="topbar-actions">
+      <button class="btn" onclick="toggleTheme()">☀️ / 🌙</button>
+      <button class="btn btn-run" onclick="runCode()">▶ Run</button>
+    </div>
+  </div>
+  <div class="split">
+  <div class="content" id="content">
+
+<!-- ══ L2 ══ -->
+<div class="lesson active" id="s-l2">
+  <div class="lbadge">LESSON 2</div>
+  <h1 class="lt">Data Types &amp; Variables</h1>
+  <p class="ls">Every piece of data in JavaScript has a type. Understanding types is the foundation of everything else.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>Declaring Variables</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// const — value never changes (use by default)
+const name = 'Alice';
+
+// let — value can change
+let score = 0;
+score = 10; // OK
+
+// var — avoid! has scoping bugs
+var age = 25;
+
+console.log(name);  // 'Alice'
+console.log(score); // 10</code></pre></div>
+  <div class="tip"><b>💡 Tip:</b> Default to <code>const</code>. Use <code>let</code> when value changes. Never use <code>var</code>.</div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Primitive Types</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// String
+const greeting = 'Hello, World!';
+const msg = `Hi, ${greeting}`; // template literal
+
+// Number (integers AND decimals — one type)
+const age = 25;
+const price = 9.99;
+
+// Boolean
+const isLoggedIn = true;
+
+// Null & Undefined
+let x;        // undefined — not yet assigned
+let y = null; // null — intentionally empty
+
+console.log(typeof 42);        // 'number'
+console.log(typeof 'hello');   // 'string'
+console.log(typeof true);      // 'boolean'
+console.log(typeof undefined); // 'undefined'
+console.log(typeof null);      // 'object' ← known JS quirk!</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Operators</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// Arithmetic
+console.log(5 + 3);  // 8
+console.log(10 % 3); // 1 — remainder
+console.log(2 ** 3); // 8 — exponent
+
+// Comparison (always use === not ==)
+console.log(5 === 5);   // true  — strict: value AND type
+console.log(5 === '5'); // false — different types
+console.log(5 == '5');  // true  — loose: AVOID this!
+
+// Logical
+console.log(true && false); // false — AND
+console.log(true || false); // true  — OR
+console.log(!true);         // false — NOT</code></pre></div>
+  <div class="warn"><b>⚠️</b> Always use <code>===</code>. Double equals <code>==</code> converts types silently and causes bugs.</div></div>
+  <button class="done-btn" id="db-l2" onclick="done('l2')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ L3 ══ -->
+<div class="lesson" id="s-l3">
+  <div class="lbadge">LESSON 3</div>
+  <h1 class="lt">Conditionals</h1>
+  <p class="ls">Let your program make decisions based on whether something is true or false.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>if / else if / else</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">const score = 75;
+
+if (score >= 90) {
+  console.log('A');
+} else if (score >= 80) {
+  console.log('B');
+} else if (score >= 70) {
+  console.log('C'); // ← this runs
+} else {
+  console.log('Fail');
+}</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Ternary &amp; switch</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// Ternary — shorthand if/else
+const age = 20;
+const status = age >= 18 ? 'adult' : 'minor';
+console.log(status); // 'adult'
+
+// switch — check one variable against many values
+const day = 'Monday';
+switch (day) {
+  case 'Monday': console.log('Start of week'); break;
+  case 'Friday': console.log('Almost weekend!'); break;
+  case 'Saturday':
+  case 'Sunday':  console.log('Weekend!'); break;
+  default:        console.log('Midweek');
+}</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Truthy &amp; Falsy</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// Falsy: false, 0, '', null, undefined, NaN
+// Truthy: everything else
+
+const username = '';
+if (username) {
+  console.log('Welcome!');
+} else {
+  console.log('Please enter a username'); // runs
+}
+
+console.log(Boolean(0));       // false
+console.log(Boolean(''));      // false
+console.log(Boolean([]));      // true — empty array is truthy!
+console.log(Boolean('false')); // true — non-empty string is truthy!</code></pre></div></div>
+  <button class="done-btn" id="db-l3" onclick="done('l3')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ L4 ══ -->
+<div class="lesson" id="s-l4">
+  <div class="lbadge">LESSON 4</div>
+  <h1 class="lt">Loops</h1>
+  <p class="ls">Repeat code without writing it over and over. Essential for working with collections.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>for &amp; while</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// for — when you know the count
+for (let i = 0; i < 5; i++) {
+  console.log(i); // 0 1 2 3 4
+}
+
+// while — when you don't know the count
+let count = 0;
+while (count < 3) {
+  console.log(count);
+  count++;
+}</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>for...of &amp; for...in</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// for...of — cleanest way to loop an array
+const fruits = ['apple', 'banana', 'mango'];
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+
+// for...in — loops over object keys
+const person = { name: 'Alice', age: 25 };
+for (const key in person) {
+  console.log(key + ': ' + person[key]);
+}
+
+// break & continue
+for (let i = 0; i < 5; i++) {
+  if (i === 2) continue; // skip 2
+  if (i === 4) break;    // stop at 4
+  console.log(i); // 0 1 3
+}</code></pre></div></div>
+  <button class="done-btn" id="db-l4" onclick="done('l4')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ L5 ══ -->
+<div class="lesson" id="s-l5">
+  <div class="lbadge">LESSON 5</div>
+  <h1 class="lt">Functions</h1>
+  <p class="ls">Reusable blocks of code — the most important concept in JavaScript.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>Three ways to write functions</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// 1. Declaration (hoisted — can call before definition)
+function greet(name) {
+  return 'Hello, ' + name + '!';
+}
+
+// 2. Expression
+const greet2 = function(name) {
+  return 'Hello, ' + name + '!';
+};
+
+// 3. Arrow (ES6+) — most common in modern code
+const greet3 = (name) => 'Hello, ' + name + '!';
+const double = n => n * 2;          // single param, no parens needed
+const sayHi = () => 'Hi!';          // no params
+
+console.log(greet('Alice'));  // 'Hello, Alice!'
+console.log(double(5));       // 10</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Default params &amp; Higher-Order Functions</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// Default parameters
+function greet(name = 'stranger') {
+  return `Hello, ${name}!`;
+}
+console.log(greet());        // 'Hello, stranger!'
+console.log(greet('Alice')); // 'Hello, Alice!'
+
+// Higher-order: functions that take or return functions
+function runTwice(fn) { fn(); fn(); }
+runTwice(() => console.log('Hello!')); // Hello! Hello!
+
+function multiplier(factor) {
+  return n => n * factor;
+}
+const triple = multiplier(3);
+console.log(triple(5)); // 15</code></pre></div></div>
+  <button class="done-btn" id="db-l5" onclick="done('l5')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ L6 ══ -->
+<div class="lesson" id="s-l6">
+  <div class="lbadge">LESSON 6</div>
+  <h1 class="lt">Arrays</h1>
+  <p class="ls">Ordered lists of values. The backbone of data manipulation in JavaScript.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>Creating &amp; Modifying</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">const fruits = ['apple', 'banana', 'mango'];
+console.log(fruits[0]);     // 'apple'
+console.log(fruits.length); // 3
+
+fruits.push('grape');    // add to end
+fruits.pop();            // remove from end
+fruits.unshift('kiwi'); // add to start
+fruits.shift();          // remove from start
+console.log(fruits);</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>map / filter / reduce</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">const nums = [1, 2, 3, 4, 5];
+
+const doubled = nums.map(n => n * 2);
+console.log(doubled); // [2,4,6,8,10]
+
+const evens = nums.filter(n => n % 2 === 0);
+console.log(evens); // [2,4]
+
+const sum = nums.reduce((total, n) => total + n, 0);
+console.log(sum); // 15
+
+// Chain them!
+const result = nums.filter(n => n > 2).map(n => n * 10);
+console.log(result); // [30,40,50]</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Searching &amp; other methods</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">const fruits = ['apple', 'banana', 'mango'];
+
+console.log(fruits.includes('banana'));            // true
+console.log(fruits.find(f => f.startsWith('b'))); // 'banana'
+console.log(fruits.some(f => f.length > 5));      // true
+console.log(fruits.every(f => f.length > 3));     // true
+
+const a = [1,2,3], b = [4,5,6];
+console.log([...a, ...b]);    // [1,2,3,4,5,6]
+console.log(a.join(' - '));   // '1 - 2 - 3'
+console.log(a.slice(1, 3));   // [2,3] — non-destructive</code></pre></div></div>
+  <button class="done-btn" id="db-l6" onclick="done('l6')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ L7 ══ -->
+<div class="lesson" id="s-l7">
+  <div class="lbadge">LESSON 7</div>
+  <h1 class="lt">Objects</h1>
+  <p class="ls">Key-value pairs to model real-world data. One of the most important structures in JavaScript.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>Creating, accessing, modifying</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">const person = { name: 'Alice', age: 25, city: 'London' };
+
+console.log(person.name);    // dot notation
+console.log(person['city']); // bracket notation
+
+person.age = 26;        // update
+person.email = 'a@b.c'; // add
+delete person.city;     // remove
+console.log(person);</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Methods, destructuring, spread</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// Methods — functions inside objects
+const person = {
+  name: 'Alice',
+  greet() { return 'Hi, I am ' + this.name; }
+};
+console.log(person.greet()); // 'Hi, I am Alice'
+
+// Destructuring
+const { name, greet } = person;
+console.log(name); // 'Alice'
+
+// Spread — merge objects
+const defaults = { theme: 'light', lang: 'en' };
+const custom   = { theme: 'dark' };
+const config   = { ...defaults, ...custom };
+console.log(config); // { theme: 'dark', lang: 'en' }</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Object methods &amp; arrays of objects</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">const scores = { Alice: 90, Bob: 75, Carol: 88 };
+console.log(Object.keys(scores));    // ['Alice','Bob','Carol']
+console.log(Object.values(scores));  // [90,75,88]
+for (const [name, score] of Object.entries(scores)) {
+  console.log(`${name}: ${score}`);
+}
+
+// Arrays of objects — most common real-world pattern
+const users = [
+  { id: 1, name: 'Alice', age: 25 },
+  { id: 2, name: 'Bob',   age: 17 },
+];
+const adults = users.filter(u => u.age >= 18);
+console.log(adults.map(u => u.name)); // ['Alice']</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">4</span>Objects vs Primitives — Copy vs Reference</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// Primitives store a COPY
+let a = 42;
+let b = a;
+b = 99;
+console.log(a); // 42 — unchanged
+
+// Objects store a REFERENCE (pointer to same object)
+const obj = { data: 42 };
+const ref = obj;
+ref.data = 99;
+console.log(obj.data); // 99 — changed! same object
+
+// Reassigning a variable breaks the reference
+let animal = { species: 'dog' };
+let dog = animal;
+animal = { species: 'cat' }; // new object
+console.log(dog.species); // 'dog' — still points to old one</code></pre></div>
+  <div class="tip"><b>💡</b> Primitive = photocopy. Object = shared Google Doc link.</div></div>
+  <button class="done-btn" id="db-l7" onclick="done('l7')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ SCOPE ══ -->
+<div class="lesson" id="s-scope">
+  <div class="lbadge">JS ADVANCED</div>
+  <h1 class="lt">Scope &amp; Closures</h1>
+  <p class="ls">Understanding where variables live and how functions remember their environment.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>Block scope — let &amp; const vs var</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// let/const are block-scoped — stay inside {}
+{
+  let blockLet = 'inside';
+  const blockConst = 'also inside';
+  console.log(blockLet); // works
+}
+// console.log(blockLet); // ReferenceError!
+
+// var leaks out of blocks (this is why we avoid it)
+{
+  var leaked = 'oops';
+}
+console.log(leaked); // 'oops' — bad!
+
+// let in loops — each iteration has its own i
+for (let i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 100);
+}
+// prints: 0, 1, 2 (correct with let)
+// with var it would print: 3, 3, 3 (wrong!)</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Function scope &amp; closures</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// Closure: inner function remembers outer variables
+function makeCounter() {
+  let count = 0; // private to makeCounter
+  return function() {
+    count++;
+    return count;
+  };
+}
+
+const counter = makeCounter();
+console.log(counter()); // 1
+console.log(counter()); // 2
+console.log(counter()); // 3
+// count is not accessible outside — it's private!</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Practical closure patterns</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// Factory function — each call gets its own scope
+function createMultiplier(factor) {
+  return n => n * factor; // 'factor' is remembered
+}
+const double = createMultiplier(2);
+const triple = createMultiplier(3);
+console.log(double(5)); // 10
+console.log(triple(5)); // 15
+
+// Memoization — cache expensive results
+function memoize(fn) {
+  const cache = {};
+  return function(n) {
+    if (cache[n] !== undefined) return cache[n];
+    cache[n] = fn(n);
+    return cache[n];
+  };
+}
+const slowSquare = memoize(n => n * n);
+console.log(slowSquare(4)); // 16 (computed)
+console.log(slowSquare(4)); // 16 (from cache)</code></pre></div></div>
+  <button class="done-btn" id="db-scope" onclick="done('scope')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ ERRORS ══ -->
+<div class="lesson" id="s-errors">
+  <div class="lbadge">JS ADVANCED</div>
+  <h1 class="lt">Error Handling</h1>
+  <p class="ls">Write code that fails gracefully — catch problems and recover instead of crashing.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>try / catch / finally</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">try {
+  const result = JSON.parse('invalid json');
+} catch (error) {
+  console.log('Caught:', error.message);
+} finally {
+  console.log('This always runs — great for cleanup');
+}
+
+// Error types
+try {
+  null.property;          // TypeError
+} catch (e) {
+  console.log(e instanceof TypeError); // true
+  console.log(e.name);    // 'TypeError'
+  console.log(e.message); // Cannot read properties of null
+}</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Throwing custom errors</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">function divide(a, b) {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new TypeError('Arguments must be numbers');
+  }
+  if (b === 0) {
+    throw new Error('Cannot divide by zero');
+  }
+  return a / b;
+}
+
+try {
+  console.log(divide(10, 2)); // 5
+  console.log(divide(10, 0)); // throws
+} catch (e) {
+  console.log(e.message); // 'Cannot divide by zero'
+}</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Error handling patterns</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// Safe JSON parse — return null on failure
+function safeJSON(str) {
+  try {
+    return JSON.parse(str);
+  } catch {
+    return null;
+  }
+}
+console.log(safeJSON('{"a":1}')); // { a: 1 }
+console.log(safeJSON('bad'));     // null
+
+// Custom error class
+class ValidationError extends Error {
+  constructor(field, message) {
+    super(message);
+    this.name = 'ValidationError';
+    this.field = field;
+  }
+}
+
+try {
+  throw new ValidationError('email', 'Invalid email format');
+} catch (e) {
+  if (e instanceof ValidationError) {
+    console.log(`Field: ${e.field}, Error: ${e.message}`);
+  }
+}</code></pre></div></div>
+  <button class="done-btn" id="db-errors" onclick="done('errors')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ DOM ══ -->
+<div class="lesson" id="s-dom">
+  <div class="lbadge">JS ADVANCED</div>
+  <h1 class="lt">DOM Events</h1>
+  <p class="ls">Respond to user interactions — clicks, typing, form submission, keyboard, and more.</p>
+  <div class="info"><b>ℹ️ Note:</b> DOM code runs in a browser page. These examples need real HTML elements to work — paste them into your own HTML file or browser console.</div>
+  <div class="card"><div class="ct"><span class="num">1</span>Selecting elements &amp; addEventListener</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Selecting elements
+const btn   = document.querySelector('#myButton');   // first match
+const items = document.querySelectorAll('.item');     // all matches
+
+// addEventListener(event, handler)
+btn.addEventListener('click', function(event) {
+  console.log('Clicked!');
+  console.log(event.target); // the element clicked
+});
+
+// Arrow function version
+btn.addEventListener('click', (e) => {
+  e.preventDefault(); // stop default behavior (e.g. form submit, link navigate)
+  e.stopPropagation(); // stop event bubbling up to parent
+});</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Common events</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">const input = document.querySelector('input');
+const form  = document.querySelector('form');
+
+// Input events
+input.addEventListener('input',  (e) => console.log(e.target.value)); // on every keystroke
+input.addEventListener('change', (e) => console.log('Changed'));       // on blur
+input.addEventListener('focus',  () => console.log('Focused'));
+input.addEventListener('blur',   () => console.log('Lost focus'));
+
+// Form submit
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); // stop page reload
+  const data = new FormData(e.target);
+  console.log(data.get('username'));
+});
+
+// Keyboard
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') console.log('Escape pressed');
+  if (e.ctrlKey && e.key === 's') {
+    e.preventDefault();
+    console.log('Ctrl+S pressed');
+  }
+});</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Event delegation</div>
+  <p>Add ONE listener to a parent instead of many listeners to each child — more efficient and works for dynamically added elements.</p>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Instead of this (bad — listeners on every button):
+document.querySelectorAll('.delete-btn').forEach(btn => {
+  btn.addEventListener('click', handleDelete);
+});
+
+// Do this — one listener on the parent:
+document.querySelector('#list').addEventListener('click', (e) => {
+  if (e.target.matches('.delete-btn')) {
+    e.target.closest('li').remove();
+  }
+  if (e.target.matches('.edit-btn')) {
+    const id = e.target.dataset.id; // read data-id attribute
+    openEditor(id);
+  }
+});</code></pre></div>
+  <div class="tip"><b>💡</b> Event delegation works because events "bubble up" from child to parent by default.</div></div>
+  <button class="done-btn" id="db-dom" onclick="done('dom')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ MODULES ══ -->
+<div class="lesson" id="s-modules">
+  <div class="lbadge">JS ADVANCED</div>
+  <h1 class="lt">Modules</h1>
+  <p class="ls">Split code into separate files. Import only what you need. Organize your codebase.</p>
+  <div class="info"><b>ℹ️ Note:</b> Modules require a build tool (Vite, Webpack) or <code>type="module"</code> on a server. These examples are for reference.</div>
+  <div class="card"><div class="ct"><span class="num">1</span>Named exports &amp; imports</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// math.js — named exports
+export const PI = 3.14159;
+export function add(a, b) { return a + b; }
+export function multiply(a, b) { return a * b; }
+
+// app.js — import only what you need
+import { add, PI } from './math.js';
+console.log(add(2, 3)); // 5
+console.log(PI);        // 3.14159
+
+// Import everything as a namespace
+import * as math from './math.js';
+console.log(math.multiply(3, 4)); // 12</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Default exports</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// greet.js — one default export per file
+export default function greet(name) {
+  return `Hello, ${name}!`;
+}
+
+// app.js — any name works for default import
+import sayHello from './greet.js';
+console.log(sayHello('Alice')); // 'Hello, Alice!'
+
+// Mix default and named
+// utils.js
+export default class Logger { log(msg) { console.log(msg); } }
+export const VERSION = '1.0.0';
+
+// import both
+import Logger, { VERSION } from './utils.js';</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Re-exports &amp; barrel files</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// index.js — barrel file, re-exports everything
+export { add, multiply } from './math.js';
+export { greet }         from './greet.js';
+export { formatDate }    from './date.js';
+
+// Now consumers import from one place:
+import { add, greet, formatDate } from './utils/index.js';
+
+// Dynamic import — load only when needed (code splitting)
+async function loadHeavyModule() {
+  const { heavyFunction } = await import('./heavy.js');
+  heavyFunction();
+}</code></pre></div></div>
+  <button class="done-btn" id="db-modules" onclick="done('modules')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ PROMISES ══ -->
+<div class="lesson" id="s-promises">
+  <div class="lbadge">JS ADVANCED</div>
+  <h1 class="lt">Promises</h1>
+  <p class="ls">Handle asynchronous operations — like API calls — without blocking the rest of your code.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>What is a Promise?</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// A Promise is an object representing a future value
+// States: pending → fulfilled (resolved) OR rejected
+
+const promise = new Promise((resolve, reject) => {
+  const success = true;
+  if (success) {
+    resolve('Data loaded!');
+  } else {
+    reject(new Error('Failed'));
+  }
+});
+
+promise
+  .then(data  => console.log('Success:', data))
+  .catch(err  => console.error('Error:', err.message))
+  .finally(() => console.log('Done — always runs'));</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Promise.all &amp; Promise.allSettled</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">const p1 = Promise.resolve('Users data');
+const p2 = Promise.resolve('Posts data');
+const p3 = Promise.reject(new Error('Config failed'));
+
+// Promise.all — fails fast if ANY rejects
+Promise.all([p1, p2])
+  .then(([users, posts]) => console.log(users, posts));
+
+// Promise.allSettled — waits for all, never fails
+Promise.allSettled([p1, p2, p3]).then(results => {
+  results.forEach(r => {
+    if (r.status === 'fulfilled') console.log('OK:', r.value);
+    if (r.status === 'rejected')  console.log('FAIL:', r.reason.message);
+  });
+});</code></pre></div></div>
+  <button class="done-btn" id="db-promises" onclick="done('promises')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ ASYNC ══ -->
+<div class="lesson" id="s-async">
+  <div class="lbadge">JS ADVANCED</div>
+  <h1 class="lt">Async / Await</h1>
+  <p class="ls">Write asynchronous code that reads like synchronous code. Built on top of Promises.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>async &amp; await basics</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// async function always returns a Promise
+async function getData() {
+  return 'hello'; // same as Promise.resolve('hello')
+}
+getData().then(v => console.log(v)); // 'hello'
+
+// await pauses until the Promise resolves
+async function example() {
+  const result = await Promise.resolve(42);
+  console.log(result); // 42
+  return result;
+}
+example();</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Fetching data (real-world pattern)</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">async function fetchUser(id) {
+  try {
+    const res = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const user = await res.json();
+    console.log(user.name, user.email);
+    return user;
+  } catch (err) {
+    console.error('Failed to fetch user:', err.message);
+    return null;
+  }
+}
+
+fetchUser(1);</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Parallel requests</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// Sequential — slow (waits for each one)
+async function sequential() {
+  const user  = await fetch('/api/user').then(r => r.json());
+  const posts = await fetch('/api/posts').then(r => r.json());
+  // total time = user + posts
+}
+
+// Parallel — fast (runs at the same time)
+async function parallel() {
+  const [user, posts] = await Promise.all([
+    fetch('https://jsonplaceholder.typicode.com/users/1').then(r => r.json()),
+    fetch('https://jsonplaceholder.typicode.com/posts?userId=1').then(r => r.json()),
+  ]);
+  console.log(user.name);
+  console.log('Posts count:', posts.length);
+}
+
+parallel();</code></pre></div>
+  <div class="tip"><b>💡 Rule:</b> If requests don't depend on each other, run them with <code>Promise.all</code> — never await sequentially when you can parallelize.</div></div>
+  <button class="done-btn" id="db-async" onclick="done('async')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ OOP & CLASSES ══ -->
+<div class="lesson" id="s-oop">
+  <div class="lbadge">JS ADVANCED</div>
+  <h1 class="lt">OOP &amp; Classes</h1>
+  <p class="ls">Object-Oriented Programming lets you model real-world things as objects with data (properties) and behaviour (methods). ES6 <code>class</code> syntax makes it clean and readable.</p>
+
+  <div class="card"><div class="ct"><span class="num">1</span>Defining a class</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">class Animal {
+  // constructor runs when you do: new Animal(...)
+  constructor(name, sound) {
+    this.name  = name;   // 'this' = the new object being created
+    this.sound = sound;
+  }
+
+  // method — shared by all instances
+  speak() {
+    console.log(`${this.name} says ${this.sound}!`);
+  }
+}
+
+const cat = new Animal('Cat', 'Meow');
+const dog = new Animal('Dog', 'Woof');
+cat.speak(); // Cat says Meow!
+dog.speak(); // Dog says Woof!
+console.log(cat.name); // Cat</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Inheritance — extends &amp; super</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  speak() {
+    console.log(`${this.name} makes a sound.`);
+  }
+}
+
+class Dog extends Animal { // Dog inherits from Animal
+  constructor(name, breed) {
+    super(name);           // call Animal's constructor first!
+    this.breed = breed;
+  }
+  speak() {               // override parent method
+    console.log(`${this.name} barks!`);
+  }
+  info() {
+    console.log(`${this.name} is a ${this.breed}`);
+  }
+}
+
+const d = new Dog('Rex', 'Labrador');
+d.speak(); // Rex barks!
+d.info();  // Rex is a Labrador</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Getters, Setters &amp; static methods</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">class Circle {
+  constructor(radius) {
+    this._radius = radius; // _ = convention for "private-ish"
+  }
+
+  get radius() { return this._radius; }
+
+  set radius(value) {
+    if (value < 0) throw new Error('Radius cannot be negative');
+    this._radius = value;
+  }
+
+  get area() {
+    return Math.PI * this._radius ** 2;
+  }
+
+  static unitCircle() {  // static = called on the class, not an instance
+    return new Circle(1);
+  }
+}
+
+const c = new Circle(5);
+console.log(c.radius);         // 5
+console.log(c.area.toFixed(2)); // 78.54
+c.radius = 10;
+console.log(c.area.toFixed(2)); // 314.16
+
+const unit = Circle.unitCircle();
+console.log(unit.radius); // 1</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">4</span>Practical example — BankAccount</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">class BankAccount {
+  #balance = 0; // private field (truly private, no _ needed)
+
+  constructor(owner, initialDeposit = 0) {
+    this.owner = owner;
+    this.#balance = initialDeposit;
+  }
+
+  deposit(amount) {
+    if (amount <= 0) throw new Error('Deposit must be positive');
+    this.#balance += amount;
+    console.log(`Deposited $${amount}. New balance: $${this.#balance}`);
+  }
+
+  withdraw(amount) {
+    if (amount > this.#balance) throw new Error('Insufficient funds');
+    this.#balance -= amount;
+    console.log(`Withdrew $${amount}. New balance: $${this.#balance}`);
+  }
+
+  get balance() { return this.#balance; }
+}
+
+const acc = new BankAccount('Alice', 100);
+acc.deposit(50);   // Deposited $50. New balance: $150
+acc.withdraw(30);  // Withdrew $30. New balance: $120
+console.log(acc.balance); // 120</code></pre></div>
+  <div class="tip"><b>💡 Key OOP ideas:</b> <b>Encapsulation</b> — hide internal data with private fields. <b>Inheritance</b> — child classes reuse parent code. <b>Polymorphism</b> — child classes override parent methods.</div></div>
+  <button class="done-btn" id="db-oop" onclick="done('oop')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ JSON ══ -->
+<div class="lesson" id="s-json">
+  <div class="lbadge">JS ADVANCED</div>
+  <h1 class="lt">JSON</h1>
+  <p class="ls">JSON (JavaScript Object Notation) is the universal format for exchanging data — between your JS app and a server, or stored in a file. It looks just like JS objects, with a few strict rules.</p>
+
+  <div class="card"><div class="ct"><span class="num">1</span>JSON syntax rules</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// Valid JSON — strict rules:
+// - Keys MUST be in double quotes
+// - Strings MUST use double quotes (no single quotes)
+// - No trailing commas
+// - No functions, undefined, or comments
+
+const jsonString = '{"name":"Alice","age":30,"isAdmin":false,"scores":[95,87,92],"address":{"city":"KL"}}';
+
+// Parse JSON string → JS object
+const obj = JSON.parse(jsonString);
+console.log(obj.name);           // Alice
+console.log(obj.address.city);   // KL
+console.log(obj.scores[0]);      // 95
+
+// Convert JS object → JSON string
+const person = { name: 'Bob', age: 25, hobbies: ['coding', 'music'] };
+const str = JSON.stringify(person);
+console.log(str);
+// {"name":"Bob","age":25,"hobbies":["coding","music"]}
+
+// Pretty-print with indentation
+console.log(JSON.stringify(person, null, 2));</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Reading &amp; writing JSON in Node.js</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// In Node.js — reading a JSON file (data.json)
+const fs = require('fs');
+
+// READ: load file → parse → use as object
+const raw  = fs.readFileSync('data.json', 'utf8');
+const data = JSON.parse(raw);
+console.log(data.users[0].name);
+
+// WRITE: modify object → stringify → save file
+data.users.push({ name: 'Charlie', age: 28 });
+fs.writeFileSync('data.json', JSON.stringify(data, null, 2));
+console.log('Saved!');
+
+// data.json looks like:
+// {
+//   "users": [
+//     { "name": "Alice", "age": 30 },
+//     { "name": "Charlie", "age": 28 }
+//   ]
+// }</code></pre></div>
+  <div class="env-note">⚡ This code runs in <b>Node.js</b> (not the browser). Run it with <code>node app.js</code> in the terminal.</div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>JSON with fetch (API calls)</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// GET — fetch JSON from an API
+async function getPost() {
+  const res  = await fetch('https://jsonplaceholder.typicode.com/posts/1');
+  const post = await res.json(); // res.json() parses JSON for you
+  console.log(post.title);
+  console.log(post.body.slice(0, 50) + '...');
+}
+getPost();
+
+// POST — send JSON to an API
+async function createPost() {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ title: 'My Post', body: 'Hello!', userId: 1 })
+  });
+  const data = await res.json();
+  console.log('Created with id:', data.id);
+}
+createPost();</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">4</span>Common mistakes</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// ❌ Single quotes — invalid JSON!
+// JSON.parse("{'name':'Alice'}"); // SyntaxError
+
+// ✅ Always double quotes
+JSON.parse('{"name":"Alice"}'); // works
+
+// ❌ Trailing comma — invalid!
+// JSON.parse('{"a":1, "b":2,}'); // SyntaxError
+
+// Cloning an object with JSON (quick deep copy)
+const original = { a: 1, b: { c: 2 } };
+const clone = JSON.parse(JSON.stringify(original));
+clone.b.c = 99;
+console.log(original.b.c); // 2 — not affected! (deep clone)
+console.log(clone.b.c);    // 99
+
+// ⚠️ JSON.stringify drops functions and undefined
+const obj = { name: 'Alice', greet: () => 'hi', val: undefined };
+console.log(JSON.stringify(obj)); // {"name":"Alice"}</code></pre></div>
+  <div class="tip"><b>💡 Remember:</b> <code>JSON.parse()</code> = string → object. <code>JSON.stringify()</code> = object → string. JSON is always a string when stored or sent over a network.</div></div>
+  <button class="done-btn" id="db-json" onclick="done('json')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ REACT COMPONENTS ══ -->
+<div class="lesson" id="s-r-comp">
+  <div class="lbadge react">REACT</div>
+  <h1 class="lt">Components &amp; JSX</h1>
+  <p class="ls">React builds UIs from components — reusable, self-contained pieces of UI. JSX is HTML-like syntax inside JavaScript.</p>
+  <div class="env-note">⚛️ React code requires a project with React installed. Use <strong>Vite</strong>: run <code>npm create vite@latest my-app -- --template react</code></div>
+  <div class="card"><div class="ct"><span class="num">1</span>Function components &amp; JSX</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// A component is a function that returns JSX
+function Greeting({ name }) {
+  return (
+    &lt;div className="card"&gt;
+      &lt;h1&gt;Hello, {name}!&lt;/h1&gt;
+      &lt;p&gt;Welcome back.&lt;/p&gt;
+    &lt;/div&gt;
+  );
+}
+
+// JSX rules:
+// 1. className not class
+// 2. One root element (or use &lt;&gt;...&lt;/&gt; fragment)
+// 3. Self-close empty tags: &lt;img /&gt; &lt;input /&gt;
+// 4. JavaScript in {curly braces}
+// 5. Component names MUST start with capital letter</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Props</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Props = inputs to a component (read-only!)
+function Button({ label, onClick, disabled = false, variant = 'primary' }) {
+  return (
+    &lt;button
+      onClick={onClick}
+      disabled={disabled}
+      className={`btn btn-${variant}`}
+    &gt;
+      {label}
+    &lt;/button&gt;
+  );
+}
+
+// Using the component
+function App() {
+  return (
+    &lt;&gt;
+      &lt;Button label="Save"   onClick={() => console.log('saved')} /&gt;
+      &lt;Button label="Delete" onClick={() => {}} variant="danger" /&gt;
+      &lt;Button label="Submit" disabled={true} /&gt;
+    &lt;/&gt;
+  );
+}</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Conditional rendering &amp; lists</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">function UserList({ users, isLoading }) {
+  // Conditional rendering
+  if (isLoading) return &lt;p&gt;Loading...&lt;/p&gt;;
+  if (!users.length) return &lt;p&gt;No users found.&lt;/p&gt;;
+
+  return (
+    &lt;ul&gt;
+      {/* .map() to render lists — always add key! */}
+      {users.map(user => (
+        &lt;li key={user.id}&gt;
+          &lt;strong&gt;{user.name}&lt;/strong&gt;
+          {user.isAdmin &amp;&amp; &lt;span&gt; (Admin)&lt;/span&gt;}
+        &lt;/li&gt;
+      ))}
+    &lt;/ul&gt;
+  );
+}</code></pre></div>
+  <div class="warn"><b>⚠️</b> Always add a <code>key</code> prop when rendering lists — use a unique id, never the array index.</div></div>
+  <button class="done-btn" id="db-r-comp" onclick="done('r-comp')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ REACT STATE ══ -->
+<div class="lesson" id="s-r-state">
+  <div class="lbadge react">REACT</div>
+  <h1 class="lt">State &amp; Hooks</h1>
+  <p class="ls">State is data that changes over time. When state changes, React re-renders the component automatically.</p>
+  <div class="env-note">⚛️ Requires a React project environment.</div>
+  <div class="card"><div class="ct"><span class="num">1</span>useState</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">import { useState } from 'react';
+
+function Counter() {
+  // [currentValue, setterFunction] = useState(initialValue)
+  const [count, setCount] = useState(0);
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;Count: {count}&lt;/p&gt;
+      &lt;button onClick={() =&gt; setCount(count + 1)}&gt;+&lt;/button&gt;
+      &lt;button onClick={() =&gt; setCount(count - 1)}&gt;-&lt;/button&gt;
+      &lt;button onClick={() =&gt; setCount(0)}&gt;Reset&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}
+
+// IMPORTANT: never mutate state directly
+// BAD:  count++;          — won't trigger re-render!
+// GOOD: setCount(count + 1) — always use the setter</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Object &amp; array state</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">function TodoApp() {
+  const [todos, setTodos] = useState([]);
+  const [input, setInput] = useState('');
+
+  const addTodo = () => {
+    if (!input.trim()) return;
+    // Spread to create NEW array (never push directly!)
+    setTodos([...todos, { id: Date.now(), text: input, done: false }]);
+    setInput('');
+  };
+
+  const toggle = (id) => {
+    setTodos(todos.map(t =>
+      t.id === id ? { ...t, done: !t.done } : t
+    ));
+  };
+
+  const remove = (id) => setTodos(todos.filter(t => t.id !== id));
+
+  return ( /* JSX here */ );
+}</code></pre></div>
+  <div class="tip"><b>💡 Rule:</b> State must always be replaced, never mutated. Use spread <code>[...arr]</code> for arrays, <code>{...obj}</code> for objects.</div></div>
+  <button class="done-btn" id="db-r-state" onclick="done('r-state')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ USEEFFECT ══ -->
+<div class="lesson" id="s-r-effect">
+  <div class="lbadge react">REACT</div>
+  <h1 class="lt">useEffect</h1>
+  <p class="ls">Run side effects — API calls, subscriptions, timers — after rendering.</p>
+  <div class="env-note">⚛️ Requires a React project environment.</div>
+  <div class="card"><div class="ct"><span class="num">1</span>useEffect basics</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">import { useState, useEffect } from 'react';
+
+function UserProfile({ userId }) {
+  const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Runs after render
+    fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
+      .then(r => r.json())
+      .then(data => {
+        setUser(data);
+        setLoading(false);
+      });
+  }, [userId]); // ← dependency array: re-run when userId changes
+
+  if (loading) return &lt;p&gt;Loading...&lt;/p&gt;;
+  return &lt;h1&gt;{user?.name}&lt;/h1&gt;;
+}</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Dependency array rules &amp; cleanup</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// [] — run ONCE on mount (like componentDidMount)
+useEffect(() => { fetchData(); }, []);
+
+// [value] — run when value changes
+useEffect(() => { document.title = `Count: ${count}`; }, [count]);
+
+// no array — run after EVERY render (rarely what you want)
+useEffect(() => { console.log('rendered'); });
+
+// Cleanup — return a function to clean up
+useEffect(() => {
+  const timer = setInterval(() => setTime(Date.now()), 1000);
+  return () => clearInterval(timer); // cleanup on unmount
+}, []);
+
+// Abort fetch on unmount
+useEffect(() => {
+  const controller = new AbortController();
+  fetch('/api/data', { signal: controller.signal })
+    .then(r => r.json()).then(setData).catch(() => {});
+  return () => controller.abort();
+}, []);</code></pre></div></div>
+  <button class="done-btn" id="db-r-effect" onclick="done('r-effect')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ ROUTING ══ -->
+<div class="lesson" id="s-r-router">
+  <div class="lbadge react">REACT</div>
+  <h1 class="lt">Routing</h1>
+  <p class="ls">Navigate between pages in a Single Page App using React Router.</p>
+  <div class="env-note">⚛️ Install: <code>npm install react-router-dom</code></div>
+  <div class="card"><div class="ct"><span class="num">1</span>Basic routing setup</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
+
+function App() {
+  return (
+    &lt;BrowserRouter&gt;
+      &lt;nav&gt;
+        &lt;NavLink to="/"       style={({ isActive }) =&gt; isActive ? { fontWeight: 'bold' } : {}}&gt;Home&lt;/NavLink&gt;
+        &lt;NavLink to="/about"&gt;About&lt;/NavLink&gt;
+        &lt;NavLink to="/users"&gt;Users&lt;/NavLink&gt;
+      &lt;/nav&gt;
+
+      &lt;Routes&gt;
+        &lt;Route path="/"        element={&lt;Home /&gt;} /&gt;
+        &lt;Route path="/about"   element={&lt;About /&gt;} /&gt;
+        &lt;Route path="/users"   element={&lt;Users /&gt;} /&gt;
+        &lt;Route path="/users/:id" element={&lt;UserDetail /&gt;} /&gt;
+        &lt;Route path="*"        element={&lt;NotFound /&gt;} /&gt;
+      &lt;/Routes&gt;
+    &lt;/BrowserRouter&gt;
+  );
+}</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>URL params &amp; navigation</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
+
+function UserDetail() {
+  const { id } = useParams();            // /users/42 → id = '42'
+  const [searchParams] = useSearchParams(); // /users?tab=posts
+  const navigate = useNavigate();
+
+  const tab = searchParams.get('tab') || 'profile';
+
+  return (
+    &lt;div&gt;
+      &lt;p&gt;User ID: {id}&lt;/p&gt;
+      &lt;p&gt;Tab: {tab}&lt;/p&gt;
+      &lt;button onClick={() =&gt; navigate(-1)}&gt;Back&lt;/button&gt;
+      &lt;button onClick={() =&gt; navigate('/users')}&gt;All Users&lt;/button&gt;
+    &lt;/div&gt;
+  );
+}</code></pre></div></div>
+  <button class="done-btn" id="db-r-router" onclick="done('r-router')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ FORMS ══ -->
+<div class="lesson" id="s-r-forms">
+  <div class="lbadge react">REACT</div>
+  <h1 class="lt">Forms</h1>
+  <p class="ls">Handle user input with controlled components — React owns the input value.</p>
+  <div class="env-note">⚛️ Requires a React project environment.</div>
+  <div class="card"><div class="ct"><span class="num">1</span>Controlled inputs</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">function LoginForm() {
+  const [form, setForm] = useState({ email: '', password: '' });
+  const [errors, setErrors] = useState({});
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm(prev => ({ ...prev, [name]: value }));
+    // Clear error when user types
+    if (errors[name]) setErrors(prev => ({ ...prev, [name]: '' }));
+  };
+
+  const validate = () => {
+    const errs = {};
+    if (!form.email.includes('@')) errs.email = 'Invalid email';
+    if (form.password.length &lt; 8)  errs.password = 'Min 8 characters';
+    return errs;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const errs = validate();
+    if (Object.keys(errs).length) { setErrors(errs); return; }
+    console.log('Submitting:', form);
+  };
+
+  return (
+    &lt;form onSubmit={handleSubmit}&gt;
+      &lt;input name="email"    value={form.email}    onChange={handleChange} /&gt;
+      {errors.email &amp;&amp; &lt;span&gt;{errors.email}&lt;/span&gt;}
+      &lt;input name="password" value={form.password} onChange={handleChange} type="password" /&gt;
+      {errors.password &amp;&amp; &lt;span&gt;{errors.password}&lt;/span&gt;}
+      &lt;button type="submit"&gt;Login&lt;/button&gt;
+    &lt;/form&gt;
+  );
+}</code></pre></div></div>
+  <button class="done-btn" id="db-r-forms" onclick="done('r-forms')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ API ══ -->
+<div class="lesson" id="s-r-api">
+  <div class="lbadge react">REACT</div>
+  <h1 class="lt">API Integration</h1>
+  <p class="ls">Fetch data from APIs, handle loading and error states, and build custom hooks for reuse.</p>
+  <div class="env-note">⚛️ Requires a React project environment.</div>
+  <div class="card"><div class="ct"><span class="num">1</span>Custom useFetch hook</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// hooks/useFetch.js — reusable data fetching
+function useFetch(url) {
+  const [data,    setData]    = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error,   setError]   = useState(null);
+
+  useEffect(() => {
+    const controller = new AbortController();
+    setLoading(true);
+
+    fetch(url, { signal: controller.signal })
+      .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
+      .then(setData)
+      .catch(err => { if (err.name !== 'AbortError') setError(err.message); })
+      .finally(() => setLoading(false));
+
+    return () => controller.abort();
+  }, [url]);
+
+  return { data, loading, error };
+}
+
+// Using the hook
+function Posts() {
+  const { data: posts, loading, error } = useFetch('https://jsonplaceholder.typicode.com/posts');
+
+  if (loading) return &lt;p&gt;Loading...&lt;/p&gt;;
+  if (error)   return &lt;p&gt;Error: {error}&lt;/p&gt;;
+  return &lt;ul&gt;{posts.slice(0,5).map(p => &lt;li key={p.id}&gt;{p.title}&lt;/li&gt;)}&lt;/ul&gt;;
+}</code></pre></div></div>
+  <button class="done-btn" id="db-r-api" onclick="done('r-api')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ TS TYPES ══ -->
+<div class="lesson" id="s-ts-types">
+  <div class="lbadge ts">TYPESCRIPT</div>
+  <h1 class="lt">Basic Types</h1>
+  <p class="ls">TypeScript adds type annotations to JavaScript — catch bugs at compile time, not at runtime.</p>
+  <div class="env-note">🔷 TypeScript needs a tsconfig. With Vite: <code>npm create vite@latest my-app -- --template react-ts</code></div>
+  <div class="card"><div class="ct"><span class="num">1</span>Primitive types &amp; annotations</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">typescript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Type annotations — add : Type after the variable name
+const name: string  = 'Alice';
+const age:  number  = 25;
+const active: boolean = true;
+
+// TypeScript infers types — you don't always need to annotate
+const score = 100; // TypeScript knows this is number
+
+// Function annotations
+function add(a: number, b: number): number {
+  return a + b;
+}
+
+// Optional parameter with ?
+function greet(name: string, greeting?: string): string {
+  return `${greeting ?? 'Hello'}, ${name}!`;
+}
+
+// Union types — can be multiple types
+let id: string | number = 'abc-123';
+id = 42; // also valid</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Arrays, objects &amp; utility types</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">typescript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Arrays
+const nums: number[]   = [1, 2, 3];
+const tags: string[]   = ['react', 'ts'];
+const mixed: (string | number)[] = ['a', 1, 'b', 2];
+
+// Tuple — fixed length, fixed types
+const point: [number, number] = [10, 20];
+
+// Object type inline
+const user: { name: string; age: number; email?: string } = {
+  name: 'Alice',
+  age: 25,
+};
+
+// Readonly — prevents mutation
+const config: Readonly&lt;{ apiUrl: string }&gt; = { apiUrl: '/api' };
+// config.apiUrl = 'x'; // Error!
+
+// Record — object with dynamic keys
+const scores: Record&lt;string, number&gt; = { Alice: 90, Bob: 75 };</code></pre></div></div>
+  <button class="done-btn" id="db-ts-types" onclick="done('ts-types')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ TS INTERFACES ══ -->
+<div class="lesson" id="s-ts-iface">
+  <div class="lbadge ts">TYPESCRIPT</div>
+  <h1 class="lt">Interfaces &amp; Types</h1>
+  <p class="ls">Define shapes for objects and functions. The building blocks of TypeScript design.</p>
+  <div class="env-note">🔷 Requires a TypeScript environment.</div>
+  <div class="card"><div class="ct"><span class="num">1</span>interface vs type</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">typescript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// interface — for objects and classes (can be extended)
+interface User {
+  id:        number;
+  name:      string;
+  email:     string;
+  role?:     'admin' | 'user'; // optional, literal union
+  readonly createdAt: Date;    // cannot be changed
+}
+
+// type alias — for anything (primitives, unions, tuples)
+type Status = 'pending' | 'active' | 'inactive';
+type ID     = string | number;
+type Point  = { x: number; y: number };
+
+// Extending interfaces
+interface Admin extends User {
+  permissions: string[];
+}
+
+// Intersection types (like extending for type)
+type AdminUser = User &amp; { permissions: string[] };</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Generics &amp; utility types</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">typescript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Generics — reusable with any type
+function identity&lt;T&gt;(value: T): T { return value; }
+identity&lt;string&gt;('hello'); // type is string
+identity&lt;number&gt;(42);      // type is number
+
+// Generic array function
+function first&lt;T&gt;(arr: T[]): T | undefined { return arr[0]; }
+
+// Built-in utility types
+interface User { id: number; name: string; email: string; age: number; }
+
+type PartialUser  = Partial&lt;User&gt;;          // all properties optional
+type RequiredUser = Required&lt;PartialUser&gt;;  // all required
+type UserPreview  = Pick&lt;User, 'id'|'name'&gt;;   // only id & name
+type NoAge        = Omit&lt;User, 'age'&gt;;         // everything except age
+type UserKeys     = keyof User;                  // 'id'|'name'|'email'|'age'</code></pre></div></div>
+  <button class="done-btn" id="db-ts-iface" onclick="done('ts-iface')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ TS REACT ══ -->
+<div class="lesson" id="s-ts-react">
+  <div class="lbadge ts">TYPESCRIPT</div>
+  <h1 class="lt">TypeScript + React</h1>
+  <p class="ls">Type your props, state, events, and API responses to catch bugs before they reach users.</p>
+  <div class="env-note">🔷 Requires a React + TypeScript project (react-ts template).</div>
+  <div class="card"><div class="ct"><span class="num">1</span>Typing props &amp; state</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">typescript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Define prop types with an interface
+interface ButtonProps {
+  label:    string;
+  onClick:  () => void;
+  disabled?: boolean;
+  variant?:  'primary' | 'secondary' | 'danger';
+}
+
+function Button({ label, onClick, disabled = false, variant = 'primary' }: ButtonProps) {
+  return &lt;button onClick={onClick} disabled={disabled} className={variant}&gt;{label}&lt;/button&gt;;
+}
+
+// Typing useState
+const [count, setCount] = useState&lt;number&gt;(0);
+const [user,  setUser]  = useState&lt;User | null&gt;(null); // null until loaded
+
+// Typing useRef
+const inputRef = useRef&lt;HTMLInputElement&gt;(null);
+inputRef.current?.focus();</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Typing events &amp; API responses</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">typescript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Typing event handlers
+function handleChange(e: React.ChangeEvent&lt;HTMLInputElement&gt;) {
+  console.log(e.target.value);
+}
+
+function handleSubmit(e: React.FormEvent&lt;HTMLFormElement&gt;) {
+  e.preventDefault();
+}
+
+function handleClick(e: React.MouseEvent&lt;HTMLButtonElement&gt;) {
+  console.log(e.clientX, e.clientY);
+}
+
+// Typing API responses
+interface Post { id: number; title: string; body: string; userId: number; }
+
+async function fetchPosts(): Promise&lt;Post[]&gt; {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+  return res.json() as Promise&lt;Post[]&gt;;
+}</code></pre></div></div>
+  <button class="done-btn" id="db-ts-react" onclick="done('ts-react')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ HTML BASICS ══ -->
+<div class="lesson" id="s-html-basics">
+  <div class="lbadge" style="background:#e34c26;color:#fff">HTML</div>
+  <h1 class="lt">HTML Basics</h1>
+  <p class="ls">HTML (HyperText Markup Language) defines the structure and content of web pages. Every element is a tag that tells the browser what something is.</p>
+
+  <div class="card"><div class="ct"><span class="num">1</span>Page structure</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">html</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title&gt;My Page&lt;/title&gt;
+  &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+  &lt;script src="app.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre></div>
+  <div class="tip"><b>💡 Rule:</b> &lt;link&gt; goes in &lt;head&gt; (loads CSS before page renders). &lt;script&gt; goes at the end of &lt;body&gt; (runs after HTML is ready).</div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Common elements</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">html</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-html">&lt;!-- Headings h1 (biggest) to h6 (smallest) --&gt;
+&lt;h1&gt;Main Title&lt;/h1&gt;
+&lt;h2&gt;Sub-heading&lt;/h2&gt;
+
+&lt;!-- Text --&gt;
+&lt;p&gt;A paragraph of text.&lt;/p&gt;
+&lt;strong&gt;Bold&lt;/strong&gt; &lt;em&gt;Italic&lt;/em&gt;
+&lt;br&gt;  &lt;!-- line break --&gt;
+&lt;hr&gt;  &lt;!-- horizontal line --&gt;
+
+&lt;!-- Links and images --&gt;
+&lt;a href="https://example.com"&gt;Click here&lt;/a&gt;
+&lt;img src="photo.jpg" alt="Description of image"&gt;
+
+&lt;!-- Lists --&gt;
+&lt;ul&gt;                  &lt;!-- unordered (bullets) --&gt;
+  &lt;li&gt;Item one&lt;/li&gt;
+  &lt;li&gt;Item two&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;                  &lt;!-- ordered (numbers) --&gt;
+  &lt;li&gt;Step one&lt;/li&gt;
+  &lt;li&gt;Step two&lt;/li&gt;
+&lt;/ol&gt;</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Attributes &amp; forms</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">html</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-html">&lt;!-- Attributes give extra info to elements --&gt;
+&lt;a href="https://example.com" target="_blank" rel="noopener"&gt;Open in new tab&lt;/a&gt;
+&lt;img src="cat.jpg" alt="A cute cat" width="300"&gt;
+&lt;button type="button" id="myBtn" class="primary"&gt;Click me&lt;/button&gt;
+
+&lt;!-- Form: collects user input --&gt;
+&lt;form action="/submit" method="POST"&gt;
+  &lt;label for="username"&gt;Name:&lt;/label&gt;
+  &lt;input type="text"     id="username" name="username" placeholder="Your name"&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email"    id="email"    name="email"&gt;
+
+  &lt;label for="age"&gt;Age:&lt;/label&gt;
+  &lt;input type="number"   id="age"      name="age" min="1" max="120"&gt;
+
+  &lt;select name="role"&gt;
+    &lt;option value="student"&gt;Student&lt;/option&gt;
+    &lt;option value="dev"&gt;Developer&lt;/option&gt;
+  &lt;/select&gt;
+
+  &lt;button type="submit"&gt;Submit&lt;/button&gt;
+&lt;/form&gt;</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">4</span>Semantic elements &amp; DOM targeting</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">html</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-html">&lt;!-- Semantic = tags that MEAN something (screen readers, SEO) --&gt;
+&lt;header&gt;
+  &lt;nav&gt;
+    &lt;a href="/"&gt;Home&lt;/a&gt;
+    &lt;a href="/about"&gt;About&lt;/a&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;article&gt;
+    &lt;h2&gt;Post Title&lt;/h2&gt;
+    &lt;p&gt;Content...&lt;/p&gt;
+  &lt;/article&gt;
+
+  &lt;aside&gt;Sidebar&lt;/aside&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;&amp;copy; 2024 My Site&lt;/footer&gt;
+
+&lt;!-- id and class: used to target elements with CSS/JS --&gt;
+&lt;div id="unique-box"&gt;Only one on the page&lt;/div&gt;
+&lt;div class="card"&gt;Can be many&lt;/div&gt;
+&lt;div class="card highlight"&gt;Multiple classes on one element&lt;/div&gt;</code></pre></div>
+  <div class="tip"><b>💡 div vs span:</b> &lt;div&gt; is a block container (takes full width). &lt;span&gt; is inline (wraps text). Use semantic tags (header/main/footer) when they fit — div as a last resort.</div></div>
+  <button class="done-btn" id="db-html-basics" onclick="done('html-basics')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ CSS BASICS ══ -->
+<div class="lesson" id="s-css-basics">
+  <div class="lbadge" style="background:#264de4;color:#fff">CSS</div>
+  <h1 class="lt">CSS Basics</h1>
+  <p class="ls">CSS (Cascading Style Sheets) controls how HTML looks — colours, fonts, layout. You write selectors that target HTML elements, then apply properties to style them.</p>
+
+  <div class="card"><div class="ct"><span class="num">1</span>Selectors &amp; properties</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">css</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-css">/* Element selector */
+p { color: #333; font-size: 16px; }
+
+/* Class selector (.) */
+.card { background: white; border-radius: 8px; padding: 16px; }
+
+/* ID selector (#) — use sparingly */
+#header { background: navy; color: white; }
+
+/* Combining selectors */
+h1, h2 { font-family: 'Arial', sans-serif; }  /* h1 AND h2 */
+.card p { color: gray; }                        /* p inside .card */
+button:hover { background: blue; }             /* pseudo-class */
+
+/* CSS variable (custom property) */
+:root {
+  --primary: #3b82f6;
+  --gap: 16px;
+}
+.btn { background: var(--primary); margin: var(--gap); }</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>The box model</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">css</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-css">/* Every element is a box:
+   content → padding → border → margin */
+
+.box {
+  width: 200px;
+  height: 100px;
+  padding: 16px;          /* space inside border */
+  border: 2px solid black;
+  margin: 24px;           /* space outside border */
+  box-sizing: border-box; /* width includes padding+border (recommended) */
+}
+
+/* Shorthand: top right bottom left (clockwise) */
+padding: 10px 20px 10px 20px;
+/* Or: top-bottom  left-right */
+padding: 10px 20px;
+/* Or: all four sides equal */
+padding: 16px;</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Flexbox layout</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">css</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-css">/* Flexbox: arrange items in a row or column */
+.container {
+  display: flex;
+  flex-direction: row;       /* row (default) | column */
+  justify-content: center;   /* main axis: flex-start | center | space-between */
+  align-items: center;       /* cross axis: stretch | center | flex-start */
+  gap: 16px;                 /* space between items */
+  flex-wrap: wrap;           /* items wrap to next line if needed */
+}
+
+.item {
+  flex: 1;           /* item grows to fill available space */
+  flex: 0 0 200px;   /* fixed 200px, won't grow or shrink */
+}
+
+/* Centering anything — classic trick */
+.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">4</span>Common styling patterns</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">css</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-css">/* Typography */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Button style */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+}
+.btn:hover { background: #2563eb; }
+
+/* Card style */
+.card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* Responsive: different styles at different screen widths */
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+  h1 { font-size: 24px; }
+}</code></pre></div>
+  <div class="tip"><b>💡 CSS tip:</b> Use the browser DevTools (F12 → Elements) to inspect any element's box model and live-edit CSS — the fastest way to learn and debug styles.</div></div>
+  <button class="done-btn" id="db-css-basics" onclick="done('css-basics')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ COMMAND LINE ══ -->
+<div class="lesson" id="s-cmdline">
+  <div class="lbadge tools">TOOLS</div>
+  <h1 class="lt">Command Line</h1>
+  <p class="ls">The terminal lets you navigate your computer, create files, and run programs — all with text commands. It's essential for running Node.js scripts, Git, and dev tools.</p>
+
+  <div class="card"><div class="ct"><span class="num">1</span>Navigation</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">bash</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-bash"># pwd — Print Working Directory (where am I?)
+pwd
+# /Users/alice/Documents
+
+# ls — List files in current folder
+ls
+ls -l       # long format (shows permissions, size, date)
+ls -a       # show hidden files (starting with .)
+ls -la      # both
+
+# cd — Change Directory
+cd Desktop              # go into Desktop folder
+cd ..                   # go up one level (parent folder)
+cd ../..                # go up two levels
+cd ~                    # go to home directory
+cd /                    # go to root (Mac/Linux)
+cd "My Projects"        # quotes for names with spaces
+
+# On Windows (PowerShell or Git Bash):
+# Same commands work in Git Bash
+# PowerShell: cd, ls, pwd also work (aliases)</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Creating &amp; managing files</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">bash</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-bash"># touch — create a new empty file
+touch app.js
+touch index.html style.css   # create multiple files at once
+touch README.md
+
+# mkdir — Make Directory (create a folder)
+mkdir my-project
+mkdir -p src/components      # -p creates nested folders
+
+# cp — Copy a file
+cp app.js app-backup.js
+cp -r src/ src-backup/       # -r copies a whole folder
+
+# mv — Move or rename
+mv app.js main.js            # rename
+mv main.js src/              # move to src folder
+
+# rm — Remove (delete!) — careful, no recycle bin!
+rm old-file.js
+rm -r old-folder/            # delete folder and contents
+
+# cat — Print file contents to terminal
+cat app.js</code></pre></div>
+  <div class="tip"><b>⚠️ Warning:</b> <code>rm</code> permanently deletes files — there is no Undo or Recycle Bin. Double-check before running it.</div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Running Node.js programs</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">bash</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-bash"># Run a JS file with Node
+node app.js
+node src/index.js
+
+# Check Node and npm versions
+node --version     # e.g. v20.11.0
+npm --version      # e.g. 10.2.4
+
+# Run an npm script defined in package.json
+npm start
+npm run dev
+npm test
+
+# Install a package
+npm install express
+npm install -D jest          # -D = devDependency
+
+# Typical new project setup
+mkdir my-app
+cd my-app
+npm init -y                  # creates package.json
+touch index.js
+node index.js</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">4</span>Useful shortcuts</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">bash</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-bash"># Tab completion — start typing, press Tab to autocomplete
+cd Des[Tab]    # completes to: cd Desktop/
+
+# Command history — press ↑ arrow to reuse last command
+# Ctrl+C — cancel a running command
+# Ctrl+L — clear the terminal screen (same as: clear)
+# Ctrl+A — jump to start of line
+# Ctrl+E — jump to end of line
+
+# Find where a program is installed
+which node
+which npm
+
+# Print text / environment variables
+echo "Hello World"
+echo $HOME           # home directory path
+echo $PATH           # where the shell looks for programs
+
+# Open a file in VS Code from terminal
+code .               # open current folder
+code app.js          # open specific file</code></pre></div>
+  <div class="tip"><b>💡 Pro tip:</b> Open the integrated terminal in VS Code with <code>Ctrl+`</code> (backtick) — you can run commands without leaving the editor.</div></div>
+  <button class="done-btn" id="db-cmdline" onclick="done('cmdline')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ NODE.JS BASICS ══ -->
+<div class="lesson" id="s-nodejs">
+  <div class="lbadge tools">TOOLS</div>
+  <h1 class="lt">Node.js Basics</h1>
+  <p class="ls">Node.js lets you run JavaScript outside the browser — on your computer or a server. It's how you run scripts from the command line, read files, and build backends.</p>
+
+  <div class="card"><div class="ct"><span class="num">1</span>Your first Node.js script</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// app.js — run with: node app.js
+
+console.log('Hello from Node.js!');
+
+// Node has the same JS you know
+const name = 'Alice';
+const greet = (n) => `Hello, ${n}!`;
+console.log(greet(name));
+
+// Math
+console.log(Math.sqrt(144)); // 12
+
+// Simple loop
+for (let i = 1; i &lt;= 5; i++) {
+  console.log(`Item ${i}`);
+}
+
+// Node-specific: process.argv (command-line arguments)
+// run: node app.js Alice 25
+const args = process.argv.slice(2); // ['Alice', '25']
+console.log('Args:', args);</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Reading &amp; writing files (fs module)</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Node built-in modules — no install needed
+const fs = require('fs');    // CommonJS require
+const path = require('path');
+
+// --- READ FILE ---
+// Synchronous (simple, blocks until done)
+const text = fs.readFileSync('notes.txt', 'utf8');
+console.log(text);
+
+// Asynchronous (doesn't block — uses callback)
+fs.readFile('notes.txt', 'utf8', (err, data) => {
+  if (err) { console.error(err); return; }
+  console.log(data);
+});
+
+// --- WRITE FILE ---
+fs.writeFileSync('output.txt', 'Hello, file!');
+
+// Append to file (don't overwrite)
+fs.appendFileSync('log.txt', `Log: ${new Date().toISOString()}\n`);
+
+// --- PATH utilities ---
+const filePath = path.join(__dirname, 'data', 'users.json');
+console.log(filePath); // absolute path, works on Windows + Mac</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Modules: require &amp; import</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// --- CommonJS (default in Node) ---
+// math.js
+function add(a, b) { return a + b; }
+function multiply(a, b) { return a * b; }
+module.exports = { add, multiply };
+
+// app.js
+const { add, multiply } = require('./math');
+console.log(add(2, 3));      // 5
+console.log(multiply(4, 5)); // 20
+
+// --- ES Modules (add "type":"module" to package.json) ---
+// math.mjs
+export function add(a, b) { return a + b; }
+export default function multiply(a, b) { return a * b; }
+
+// app.mjs
+import multiply, { add } from './math.mjs';
+console.log(add(2, 3));      // 5
+
+// Built-in modules (no install)
+const os   = require('os');
+const http = require('http');
+console.log(os.platform()); // 'win32', 'darwin', 'linux'</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">4</span>Simple HTTP server</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// server.js — run with: node server.js
+// Then open: http://localhost:3000
+const http = require('http');
+
+const server = http.createServer((req, res) => {
+  res.writeHead(200, { 'Content-Type': 'text/plain' });
+
+  if (req.url === '/') {
+    res.end('Hello World!');
+  } else if (req.url === '/about') {
+    res.end('About page');
+  } else {
+    res.writeHead(404);
+    res.end('Not found');
+  }
+});
+
+server.listen(3000, () => {
+  console.log('Server running at http://localhost:3000');
+});</code></pre></div>
+  <div class="tip"><b>💡 Real world:</b> You'd use a framework like <b>Express</b> instead of raw http. But understanding the raw server shows you what frameworks build on top of.</div></div>
+  <button class="done-btn" id="db-nodejs" onclick="done('nodejs')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ GIT ══ -->
+<div class="lesson" id="s-git">
+  <div class="lbadge tools">TOOLS</div>
+  <h1 class="lt">Git Workflows</h1>
+  <p class="ls">Version control your code, collaborate with others, and ship confidently.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>Core commands</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">bash</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Setup
+git init                          // start a repo
+git clone https://github.com/...  // copy a repo
+
+// Daily workflow
+git status                        // see what changed
+git add .                         // stage all changes
+git add src/Button.jsx            // stage one file
+git commit -m "feat: add Button component"
+git push origin main
+
+// Viewing history
+git log --oneline                 // compact history
+git diff                          // see unstaged changes
+git diff --staged                 // see staged changes</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Branching &amp; merging</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">bash</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Branching
+git checkout -b feature/login     // create + switch to new branch
+git switch main                   // go back to main
+git merge feature/login           // merge branch into current
+git branch -d feature/login       // delete merged branch
+
+// Pull Requests workflow:
+// 1. Create branch: git checkout -b feat/my-feature
+// 2. Make commits
+// 3. Push: git push origin feat/my-feature
+// 4. Open PR on GitHub
+// 5. Get code review
+// 6. Merge to main</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Commit message conventions</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">bash</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Conventional Commits format: type(scope): description
+
+git commit -m "feat: add user authentication"
+git commit -m "fix: resolve null pointer in user fetch"
+git commit -m "refactor: extract Button into separate component"
+git commit -m "docs: update README setup instructions"
+git commit -m "test: add unit tests for auth service"
+git commit -m "chore: update dependencies"
+
+// Types: feat, fix, refactor, docs, test, chore, style, perf
+// Keep messages short (under 72 chars), use present tense
+// Bad:  "fixed the bug"  /  "changes"  /  "wip"
+// Good: "fix: resolve infinite loop in cart calculation"</code></pre></div></div>
+  <button class="done-btn" id="db-git" onclick="done('git')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ TESTING ══ -->
+<div class="lesson" id="s-testing">
+  <div class="lbadge tools">TOOLS</div>
+  <h1 class="lt">Testing</h1>
+  <p class="ls">Automated tests catch bugs before users do. Write tests that give you confidence to ship.</p>
+  <div class="env-note">🧪 Install: <code>npm install -D vitest @testing-library/react @testing-library/user-event jsdom</code></div>
+  <div class="card"><div class="ct"><span class="num">1</span>Types of tests</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Unit test — test one function in isolation
+import { describe, it, expect } from 'vitest';
+
+function add(a, b) { return a + b; }
+
+describe('add', () => {
+  it('adds two positive numbers', () => {
+    expect(add(2, 3)).toBe(5);
+  });
+  it('handles negative numbers', () => {
+    expect(add(-1, 1)).toBe(0);
+  });
+  it('handles zero', () => {
+    expect(add(0, 0)).toBe(0);
+  });
+});
+
+// Common matchers
+expect(value).toBe(5);           // strict equality
+expect(value).toEqual({ a: 1 }); // deep equality (objects)
+expect(arr).toContain('item');
+expect(fn).toThrow('error msg');
+expect(value).toBeTruthy();
+expect(value).toBeNull();</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Testing React components</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import Button from './Button';
+
+describe('Button', () => {
+  it('renders with label', () => {
+    render(&lt;Button label="Save" onClick={() =&gt; {}} /&gt;);
+    expect(screen.getByText('Save')).toBeInTheDocument();
+  });
+
+  it('calls onClick when clicked', async () => {
+    const handleClick = vi.fn(); // mock function
+    render(&lt;Button label="Save" onClick={handleClick} /&gt;);
+    await userEvent.click(screen.getByText('Save'));
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+
+  it('does not call onClick when disabled', async () => {
+    const handleClick = vi.fn();
+    render(&lt;Button label="Save" onClick={handleClick} disabled /&gt;);
+    await userEvent.click(screen.getByText('Save'));
+    expect(handleClick).not.toHaveBeenCalled();
+  });
+});</code></pre></div>
+  <div class="tip"><b>💡 Rule:</b> Test behavior, not implementation. Ask "what does the user see/do?" not "what does the code do internally?"</div></div>
+  <button class="done-btn" id="db-testing" onclick="done('testing')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ ACCESSIBILITY ══ -->
+<div class="lesson" id="s-a11y">
+  <div class="lbadge tools">TOOLS</div>
+  <h1 class="lt">Accessibility (a11y)</h1>
+  <p class="ls">Build apps that everyone can use — including people using screen readers, keyboards only, or low-vision aids.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>Semantic HTML first</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// BAD — generic divs for everything
+&lt;div onClick={submit}&gt;Submit&lt;/div&gt;
+&lt;div class="nav"&gt;&lt;div&gt;Home&lt;/div&gt;&lt;div&gt;About&lt;/div&gt;&lt;/div&gt;
+
+// GOOD — semantic elements (screen readers understand these)
+&lt;button onClick={submit}&gt;Submit&lt;/button&gt;
+&lt;nav&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/nav&gt;
+
+// Use the right element for the job:
+// &lt;button&gt;  — actions / clicks
+// &lt;a href&gt;  — navigation
+// &lt;input&gt;   — form fields
+// &lt;label&gt;   — label for inputs
+// &lt;main&gt; &lt;header&gt; &lt;nav&gt; &lt;footer&gt; &lt;aside&gt; — page structure
+// &lt;h1&gt;-&lt;h6&gt; — headings (only one h1 per page!)</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>ARIA &amp; keyboard accessibility</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">jsx</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// ARIA — when semantic HTML isn't enough
+&lt;button aria-label="Close modal" onClick={close}&gt;✕&lt;/button&gt;
+&lt;div role="alert"&gt;Error: Invalid email&lt;/div&gt;
+&lt;div role="status" aria-live="polite"&gt;Loading...&lt;/div&gt;
+
+// Always label form inputs
+&lt;label htmlFor="email"&gt;Email&lt;/label&gt;
+&lt;input id="email" type="email" /&gt;
+
+// Images — always alt text
+&lt;img src="avatar.jpg" alt="User profile photo" /&gt;
+&lt;img src="decorative.svg" alt="" /&gt; {/* decorative = empty alt */}
+
+// Keyboard: ensure all interactive elements are reachable
+// Never use tabIndex > 0 (breaks natural tab order)
+// Modals should trap focus inside when open
+// Press Escape should close modals and dropdowns</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Accessibility checklist</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Quick checklist — run through these before shipping:
+
+// 1. Keyboard navigation — tab through page, can you reach everything?
+// 2. Color contrast — text contrast ratio >= 4.5:1 (use browser DevTools)
+// 3. Images have alt text (descriptive, or empty for decorative)
+// 4. Form inputs have labels
+// 5. Error messages are announced (aria-live or role="alert")
+// 6. Focus visible — can you SEE where focus is?
+// 7. No content only communicated by color alone
+
+// Automated check with axe (catches ~30% of issues automatically)
+// npm install -D axe-core @axe-core/react
+import React from 'react';
+if (process.env.NODE_ENV === 'development') {
+  const axe = require('@axe-core/react');
+  axe(React, ReactDOM, 1000);
+}</code></pre></div></div>
+  <button class="done-btn" id="db-a11y" onclick="done('a11y')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ DEBUGGING ══ -->
+<div class="lesson" id="s-debug">
+  <div class="lbadge tools">TOOLS</div>
+  <h1 class="lt">Debugging</h1>
+  <p class="ls">Find and fix bugs systematically. The ability to debug well separates good developers from great ones.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>Console methods</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">console.log('Basic output', { user: 'Alice' });
+console.error('Something broke:', new Error('oops'));
+console.warn('Deprecated API used');
+console.table([{ name: 'Alice', age: 25 }, { name: 'Bob', age: 30 }]);
+console.group('User Details');
+  console.log('Name: Alice');
+  console.log('Age: 25');
+console.groupEnd();
+console.time('fetchUsers');
+// ... some operation ...
+console.timeEnd('fetchUsers'); // logs elapsed time
+
+// Structured logging — easier to read than string concat
+const user = { id: 1, name: 'Alice' };
+console.log({ user, timestamp: Date.now() });</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Common JS errors &amp; fixes</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button><button class="cb-btn" onclick="ti(this)">Try it ▶</button></div></div><pre><code class="language-javascript">// TypeError: Cannot read properties of undefined/null
+// Fix: check existence first
+const user = null;
+console.log(user?.name);        // optional chaining — undefined
+console.log(user?.name ?? 'Guest'); // nullish coalescing — 'Guest'
+
+// ReferenceError: x is not defined
+// Fix: check spelling, scope, and import
+
+// Off-by-one errors in arrays
+const arr = [1, 2, 3];
+console.log(arr[3]);  // undefined — last index is arr.length - 1
+
+// Async issues — forgetting await
+async function example() {
+  const data = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+  const json = await data.json();
+  console.log(json); // works
+  // without await: data is a Promise object, not the response!
+}
+example();</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Debugging strategy</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// 1. READ the error message fully — it tells you line number and type
+
+// 2. debugger statement — pauses execution in browser DevTools
+function buggyFunction(data) {
+  debugger; // execution stops here, open DevTools to inspect
+  return data.map(x => x.value);
+}
+
+// 3. Rubber duck method — explain the code out loud step by step
+
+// 4. Bisect — comment out half the code, find which half has the bug
+
+// 5. Check assumptions with console.log
+function processUser(user) {
+  console.log('Input:', user);   // Is input what I expect?
+  const result = transform(user);
+  console.log('Result:', result); // Is output what I expect?
+  return result;
+}
+
+// 6. Google the EXACT error message in quotes
+// 7. Check MDN docs for correct API usage</code></pre></div></div>
+  <button class="done-btn" id="db-debug" onclick="done('debug')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ AI ══ -->
+<div class="lesson" id="s-ai">
+  <div class="lbadge tools">TOOLS</div>
+  <h1 class="lt">AI Best Practices</h1>
+  <p class="ls">Use AI coding assistants to move faster — but stay in control. Understanding beats copy-pasting.</p>
+  <div class="card"><div class="ct"><span class="num">1</span>When to use AI</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// ✅ GOOD uses of AI:
+// - "Explain what this code does"
+// - "What's wrong with this error message: [paste error]"
+// - "Suggest a better way to structure this function"
+// - "Write a test for this function" (then READ and understand it)
+// - "Convert this to TypeScript"
+// - "Refactor this for readability"
+
+// ❌ BAD uses of AI:
+// - Copying code you don't understand into production
+// - Using AI to avoid learning fundamentals
+// - Trusting AI output without reviewing it
+// - Sharing secrets/API keys in your prompts
+// - Using AI for security-critical logic without review
+
+// The test: can you EXPLAIN every line of AI-generated code?
+// If not, you don't own it — and you can't debug it.</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">2</span>Effective prompting</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// Vague prompt (bad results):
+"Write a login function"
+
+// Specific prompt (good results):
+`Write a React login form component that:
+- Has email and password fields (controlled inputs)
+- Validates email format and min 8-char password
+- Shows inline error messages
+- Calls onSubmit(email, password) prop on success
+- Uses TypeScript with proper prop types
+- No external form libraries`
+
+// Ask for explanation alongside code:
+"Write X and explain each part so I understand it"
+
+// Ask it to review YOUR code:
+"Review this code for bugs, edge cases, and improvements: [code]"
+
+// Use AI to learn, not just to ship:
+"I wrote this solution. Is there a cleaner way? What patterns am I missing?"</code></pre></div></div>
+
+  <div class="card"><div class="ct"><span class="num">3</span>Code review mindset</div>
+  <div class="cb"><div class="cb-head"><span class="cb-lang">javascript</span><div class="cb-btns"><button class="cb-btn" onclick="cp(this)">Copy</button></div></div><pre><code class="language-javascript">// When AI gives you code, ask yourself:
+
+// 1. Do I understand what every line does?
+// 2. Are there any security risks? (SQL injection, XSS, exposed keys)
+// 3. Does it handle edge cases? (null, empty array, network failure)
+// 4. Is it tested? Can I write a test for it?
+// 5. Is it readable? Would a teammate understand this?
+
+// Red flags in AI code:
+// - eval() with user input (security risk)
+// - Missing error handling
+// - Hardcoded values that should be config
+// - Overly complex solutions for simple problems
+// - Dependencies you don't need
+
+// Golden rule: YOU are responsible for the code you ship.
+// AI is a tool, not a co-author. Review everything.</code></pre></div></div>
+  <button class="done-btn" id="db-ai" onclick="done('ai')">✓ Mark as complete</button>
+</div>
+
+<!-- ══ CHEAT SHEET ══ -->
+<div class="lesson" id="s-cheat">
+  <div class="lbadge">REFERENCE</div>
+  <h1 class="lt">Quick Reference Cheat Sheet</h1>
+  <p class="ls">Everything at a glance.</p>
+  <div class="cheat-grid">
+    <div class="cheat-card">
+      <h3>Variables &amp; Types</h3>
+      <table class="cht"><tr><td>const</td><td>Default — value never changes</td></tr><tr><td>let</td><td>Value can change</td></tr><tr><td>typeof x</td><td>Check type at runtime</td></tr><tr><td>===</td><td>Strict equality (use this!)</td></tr><tr><td>!==</td><td>Strict inequality</td></tr></table>
+      <h3 class="mt">Falsy Values</h3>
+      <table class="cht"><tr><td>false, 0, ''</td><td>Basic falsy</td></tr><tr><td>null, undefined</td><td>Empty/unset</td></tr><tr><td>NaN</td><td>Not a Number</td></tr></table>
+    </div>
+    <div class="cheat-card">
+      <h3>Array Methods</h3>
+      <table class="cht">
+        <tr><td>map(fn)</td><td>Transform → new array</td></tr>
+        <tr><td>filter(fn)</td><td>Keep matching → new array</td></tr>
+        <tr><td>reduce(fn,v)</td><td>Collapse to one value</td></tr>
+        <tr><td>find(fn)</td><td>First match</td></tr>
+        <tr><td>findIndex(fn)</td><td>Index of first match</td></tr>
+        <tr><td>some(fn)</td><td>Any match?</td></tr>
+        <tr><td>every(fn)</td><td>All match?</td></tr>
+        <tr><td>includes(v)</td><td>Value exists?</td></tr>
+        <tr><td>push/pop</td><td>Add/remove end</td></tr>
+        <tr><td>unshift/shift</td><td>Add/remove start</td></tr>
+        <tr><td>slice(s,e)</td><td>Copy section (safe)</td></tr>
+        <tr><td>splice(i,n)</td><td>Remove/insert (mutates)</td></tr>
+        <tr><td>[...a,...b]</td><td>Merge arrays</td></tr>
+      </table>
+    </div>
+    <div class="cheat-card">
+      <h3>Object Methods</h3>
+      <table class="cht"><tr><td>Object.keys(o)</td><td>Array of keys</td></tr><tr><td>Object.values(o)</td><td>Array of values</td></tr><tr><td>Object.entries(o)</td><td>[key,val] pairs</td></tr><tr><td>{...a,...b}</td><td>Merge objects</td></tr></table>
+      <h3 class="mt">Async Patterns</h3>
+      <table class="cht"><tr><td>async fn</td><td>Returns a Promise</td></tr><tr><td>await</td><td>Pause until resolved</td></tr><tr><td>try/catch</td><td>Handle async errors</td></tr><tr><td>Promise.all</td><td>Run in parallel</td></tr></table>
+    </div>
+    <div class="cheat-card">
+      <h3>React Essentials</h3>
+      <table class="cht"><tr><td>useState(v)</td><td>Local state</td></tr><tr><td>useEffect(fn,[])</td><td>Run on mount</td></tr><tr><td>useEffect(fn,[x])</td><td>Run when x changes</td></tr><tr><td>props</td><td>Data passed to component</td></tr><tr><td>key</td><td>Required for list items</td></tr></table>
+      <h3 class="mt">Git Quick Ref</h3>
+      <table class="cht"><tr><td>git checkout -b</td><td>New branch</td></tr><tr><td>git add . && commit</td><td>Save changes</td></tr><tr><td>git push origin</td><td>Push to remote</td></tr><tr><td>git merge</td><td>Merge branch</td></tr></table>
+    </div>
+  </div>
+</div>
+
+  </div><!-- /content -->
+
+  <div class="playground">
+    <div class="pg-head">
+      <div class="pg-title">Playground</div>
+      <span class="pg-hint">Ctrl+Enter to run</span>
+    </div>
+    <textarea id="editor" spellcheck="false">// Write JavaScript here!
+console.log('Hello, World!');
+
+const name = 'JavaScript';
+console.log(`Learning ${name} is fun!`);</textarea>
+    <div class="pg-bar">
+      <button class="btn-clr" onclick="clearOut()">Clear</button>
+      <button class="btn btn-run" onclick="runCode()">▶ Run</button>
+    </div>
+    <div class="output" id="output">
+      <div class="ol dim">// Output appears here...</div>
+    </div>
+  </div>
+  </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-javascript.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
